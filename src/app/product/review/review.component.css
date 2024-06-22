@@ -1,0 +1,19 @@
+input.ng-touched{
+    border-color: green;
+}
+input.ng-untouched{
+    border-color: red;
+}
+input.ng-dirty{
+    background-color: yellow;
+}
+input.ng-pristine{
+    background-color: white;
+}
+input.ng-valid{
+    border-width: 2px;
+}
+input.ng-invalid{
+    border-width: 4px;;
+}
+

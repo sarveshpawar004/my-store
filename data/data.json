@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Redmi 13C 5G",
+      "price": 10499,
+      "imageUrl": "/assets/images/Redmi 13C 5G.jpg",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt nam necessitatibus voluptatibus deleniti maiores blanditiis ex tempore recusandae velit saepe error nemo, vitae hic natus non exercitationem, sequi ut? Delectus."
+    },
+    {
+      "name": "Daikin 1.5 Ton 3 Star Inverter Split AC",
+      "price": 3699,
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt nam necessitatibus voluptatibus deleniti maiores blanditiis ex tempore recusandae velit saepe error nemo, vitae hic natus non exercitationem, sequi ut? Delectus.",
+      "imageUrl": "/assets/images/Daikin 1.5 Ton 3 Star Inverter Split AC.jpg",
+      "id": "2"
+    },
+    {
+      "name": "Apple AirPods Pro",
+      "price": 25000,
+      "description": "Nice Airpods",
+      "imageUrl": "/assets/images/Apple AirPods Pro.jpg",
+      "id": "3"
+    },
+    {
+      "id": "4",
+      "name": "Samsung Smart LED TV",
+      "price": 49990,
+      "imageUrl": "/assets/images/Samsung Smart LED TV.jpg",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt nam necessitatibus voluptatibus deleniti maiores blanditiis ex tempore recusandae velit saepe error nemo, vitae hic natus non exercitationem, sequi ut? Delectus."
+    },
+    {
+      "id": "5",
+      "name": "Fire-Boltt 4G Pro Volte Calling Smart Watch",
+      "price": 2999,
+      "imageUrl": "/assets/images/Fire-Boltt 4G Pro Volte Calling Smart Watch.jpg",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt nam necessitatibus voluptatibus deleniti maiores blanditiis ex tempore recusandae velit saepe error nemo, vitae hic natus non exercitationem, sequi ut? Delectus."
+    },
+    {
+      "id": "af20",
+      "name": "Apple Mac Book",
+      "price": 1000,
+      "description": "New Mac Book",
+      "imageUrl": "/assets/images/Redmi 13C 5G.jpg"
+    }
+  ]
+}

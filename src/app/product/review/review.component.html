@@ -1,0 +1,48 @@
+<!-- template driven form -->
+<div class="container col-lg-6">
+    <form (ngSubmit)="submitForm()" #rf="ngForm">
+        <div>
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" id="name" class="form-control"
+            [(ngModel)]="reviewForm.name" name="name" required 
+            #nameVar="ngModel"/>
+            <!-- #nameVar="ngModel"
+             here, #nameVar is the template variable referencing the input element, we assign ngModel to it so that it gets the access to the 6 phases of the control -->
+        </div>
+        <div class="alert alert-danger" *ngIf="nameVar.invalid && nameVar.touched">
+            Name not provided
+        </div>
+        <div>
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" id="email" class="form-control"
+            [(ngModel)]="reviewForm.email" name="email" required/>
+        </div>
+        <div>
+            <label for="rating" class="form-label">Rating:</label>
+            <select id="rating" class="form-select"
+            [(ngModel)]="reviewForm.rating" name="rating">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <div>
+            <label for="description" class="form-label">Description:</label>
+            <textarea id="description" rows="5" class="form-control"
+            [(ngModel)]="reviewForm.description" name="description"></textarea>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary mt-4" [disabled]="rf.invalid">Submit</button>
+        </div>
+    </form>
+</div>
+
+<!-- {{reviewForm.name}}
+{{reviewForm.email}}
+{{reviewForm.rating }}
+{{reviewForm.description}} -->
+
+<!-- json pipe is used to transform the object into JSON string to display in the template -->
+{{reviewForm | json}}

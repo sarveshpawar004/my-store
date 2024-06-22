@@ -1,0 +1,6 @@
+<div class="container m-4">
+    <div *ngIf="(myObservable$ | async) as param">
+        <p>Name: {{ param.name }}</p>
+        <p>Age: {{ param.age }}</p>
+    </div>
+</div>

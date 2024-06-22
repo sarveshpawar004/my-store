@@ -1,0 +1,37 @@
+<form [formGroup]="updateForm" (ngSubmit)="updateProduct()" 
+*ngIf="product$ | async as prod">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" id="name"
+      formControlName="name" [(ngModel)]="prod.name">
+    </div>
+    <div class="alert alert-danger" *ngIf="f['name'].touched && f['name'].invalid">
+        NAME IS REQUIRED
+    </div>    
+    <div class="alert alert-danger" *ngIf="f['name'].invalid && f['name'].dirty && f['name'].hasError('minlength')">
+        Name should have atleast 5 characters
+    </div>
+    <div class="mb-3">
+      <label for="price" class="form-label">Price</label>
+      <input type="number" class="form-control" id="price" 
+      formControlName="price" [(ngModel)]="prod.price">
+    </div>
+    <div class="alert alert-danger" *ngIf="f['price'].touched && f['price'].invalid && f['price'].hasError('required')">
+        PRICE IS REQUIRED
+    </div>
+    <div class="alert alert-danger" *ngIf="f['price'].touched && f['price'].invalid && f['price'].hasError('max')">
+        PRICE IS ABOVE MAXIMUM RANGE
+    </div>
+    <div class="alert alert-danger" *ngIf="f['price'].touched && f['price'].invalid && f['price'].hasError('min')">
+        PRICE IS BELOW MINIMUM RANGE
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea id="description" rows="5" class="form-control" formControlName="description" 
+        [(ngModel)]="prod.description"></textarea>
+    </div>
+    <input type="hidden" formControlName="imageUrl">
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{{updateForm.value | json}}
